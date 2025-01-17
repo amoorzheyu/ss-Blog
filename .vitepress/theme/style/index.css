@@ -1,5 +1,11 @@
 /* index.css */
 @import "./var.css";
+@import "./hidden.css";
+@import "./rainbow.css";
+@import "./blockquote.css";
+@import "./custom-block.css";
+@import "./blurBar.css";
+@import "./vp-code.css";
 
 /* orangeheart.css */
 @import "./orangeheart.css";

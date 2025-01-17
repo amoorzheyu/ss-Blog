@@ -1,43 +1,55 @@
 {
-  "hash": "d905b936",
-  "configHash": "2db5c740",
-  "lockfileHash": "54f5cd30",
-  "browserHash": "aa9e269d",
+  "hash": "73deb3d8",
+  "configHash": "139a4fb6",
+  "lockfileHash": "5df26a35",
+  "browserHash": "297f1781",
   "optimized": {
     "vue": {
       "src": "../../../node_modules/.pnpm/vue@3.5.13/node_modules/vue/dist/vue.runtime.esm-bundler.js",
       "file": "vue.js",
-      "fileHash": "b2f88afc",
+      "fileHash": "aae290c6",
       "needsInterop": false
     },
     "vitepress > @vue/devtools-api": {
       "src": "../../../node_modules/.pnpm/@vue+devtools-api@7.7.0/node_modules/@vue/devtools-api/dist/index.js",
       "file": "vitepress___@vue_devtools-api.js",
-      "fileHash": "6096950a",
+      "fileHash": "a330d667",
       "needsInterop": false
     },
     "vitepress > @vueuse/core": {
       "src": "../../../node_modules/.pnpm/@vueuse+core@11.3.0_vue@3.5.13/node_modules/@vueuse/core/index.mjs",
       "file": "vitepress___@vueuse_core.js",
-      "fileHash": "8a4fe8ad",
+      "fileHash": "a5cd8cac",
       "needsInterop": false
     },
     "vitepress > @vueuse/integrations/useFocusTrap": {
       "src": "../../../node_modules/.pnpm/@vueuse+integrations@11.3.0_focus-trap@7.6.4_vue@3.5.13/node_modules/@vueuse/integrations/useFocusTrap.mjs",
       "file": "vitepress___@vueuse_integrations_useFocusTrap.js",
-      "fileHash": "163828d1",
+      "fileHash": "48047749",
       "needsInterop": false
     },
     "vitepress > mark.js/src/vanilla.js": {
       "src": "../../../node_modules/.pnpm/mark.js@8.11.1/node_modules/mark.js/src/vanilla.js",
       "file": "vitepress___mark__js_src_vanilla__js.js",
-      "fileHash": "43ec3134",
+      "fileHash": "cf102373",
       "needsInterop": false
     },
     "vitepress > minisearch": {
       "src": "../../../node_modules/.pnpm/minisearch@7.1.1/node_modules/minisearch/dist/es/index.js",
       "file": "vitepress___minisearch.js",
-      "fileHash": "e576f14e",
+      "fileHash": "564ccbd5",
+      "needsInterop": false
+    },
+    "oh-my-live2d": {
+      "src": "../../../node_modules/.pnpm/oh-my-live2d@0.19.3/node_modules/oh-my-live2d/dist/index.js",
+      "file": "oh-my-live2d.js",
+      "fileHash": "d9f68cde",
+      "needsInterop": false
+    },
+    "canvas-confetti": {
+      "src": "../../../node_modules/.pnpm/canvas-confetti@1.9.3/node_modules/canvas-confetti/dist/confetti.module.mjs",
+      "file": "canvas-confetti.js",
+      "fileHash": "03a878f4",
       "needsInterop": false
     }
   },
@@ -47,6 +59,9 @@
     },
     "chunk-CQOUZRMK": {
       "file": "chunk-CQOUZRMK.js"
+    },
+    "chunk-BUSYA2B4": {
+      "file": "chunk-BUSYA2B4.js"
     }
   }
 }

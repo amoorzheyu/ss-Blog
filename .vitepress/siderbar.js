@@ -7,25 +7,25 @@ const mdRoot = './docs/'
 
 export const getSiderBarConfig = () => {
     return {
-        '/Linux/': [
-            {
-                text: 'Linux',
-                collapsed: true,
-                items: [
-                    { text: '该虚拟机似乎正在使用中', link: '/Linux/note-1.md' },
-                    { text: '该虚拟机似乎正在使用中', link: '/Linux/note-2.md' },
-                ]
-            },
-        ],
-        '/嵌入式/': [
-            {
-                text: '嵌入式',
-                items: [
-                    { text: '该虚拟机似乎正在使用中', link: '/VM虚拟机/note-1.md' },
-                    { text: '该虚拟机似乎正在使用中', link: '/VM虚拟机/note-2.md' },
-                ]
-            }
-        ]
+        // '/Linux/': [
+        //     {
+        //         text: 'Linux',
+        //         collapsed: true,
+        //         items: [
+        //             { text: '该虚拟机似乎正在使用中', link: '/Linux/note-1.md' },
+        //             { text: '该虚拟机似乎正在使用中', link: '/Linux/note-2.md' },
+        //         ]
+        //     },
+        // ],
+        // '/嵌入式/': [
+        //     {
+        //         text: '嵌入式',
+        //         items: [
+        //             { text: '该虚拟机似乎正在使用中', link: '/VM虚拟机/note-1.md' },
+        //             { text: '该虚拟机似乎正在使用中', link: '/VM虚拟机/note-2.md' },
+        //         ]
+        //     }
+        // ]
     }
 }
 

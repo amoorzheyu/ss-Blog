@@ -1,9 +1,8 @@
 ---
 layout: home
-
 hero:
   name: "眨眼睛的博客"
-  text: ""
+  text: "会软件的硬件工程师"
   tagline: 代码对我眨眼睛，编译器唱歌给我听~
   actions:
     - theme: brand
@@ -27,3 +26,15 @@ features:
     details: 一天喝八桶
     link: https://www.mxbc.com/
 ---
+
+
+
+
+<bsz/>
+
+<confetti />
+
+<DataPanel />
+
+
+

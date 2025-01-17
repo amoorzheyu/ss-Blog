@@ -1,10 +1,14 @@
 import { defineConfig } from 'vitepress'
 import { getSiderBarConfig } from './siderbar'
-
+import { AnnouncementPlugin } from 'vitepress-plugin-announcement'
+import vitepressProtectPlugin from "vitepress-protect-plugin"
+import timeline from "vitepress-markdown-timeline"; 
+import { withSidebar } from 'vitepress-sidebar'
+import { generateSidebar } from 'vitepress-sidebar';
 const baseDir = './docs'
 
 // https://vitepress.dev/reference/site-config
-export default defineConfig({
+const vitePressOptions ={
   title: "SS-Blog",
   description: "A Blog Site",
   head: [
@@ -13,6 +17,8 @@ export default defineConfig({
   ],
   base: '/',
   srcDir: "docs",   //相对目录，用于存放md文件
+  appearance: 'dark',
+  lastUpdated: true,
   themeConfig: {
     logo: '/assets/logo/logo.svg',
     // https://vitepress.dev/reference/default-theme-config
@@ -23,27 +29,22 @@ export default defineConfig({
         items: [
           { text: 'Linux', link: '/Linux/note-1' },
           { text: '嵌入式', link: '/嵌入式/note-1' },
-          { text: "C/C++", link: "/" },
+          { text: "C/C++", link: '/C&C++/1.C语言/00010.define与const的区别' },
         ],
       }
     ],
 
-    sidebar: getSiderBarConfig(),
+    sidebar: generateSidebar({
 
-    // [
-    //   {
-    //     text: 'Linux',
-    //     collapsed:false,
-    //     items: [walk(baseDir +'/Linux','')]
-    //   }
-    // ],
+    }),
 
     lastUpdated: {
-      text: '🔥上次更新时间',
+      text: '更新时间',
       formatOptions: {
-        dateStyle: 'full',
-        timeStyle: 'medium'
-      }
+        dateStyle: 'short',
+        timeStyle: 'short'
+      },
+
     },
 
 
@@ -95,5 +96,55 @@ export default defineConfig({
       label: '洋文',
       lang: 'en'
     }
+  },
+  markdown: { 
+    //行号显示
+    lineNumbers: true, 
+
+    //时间线
+    config: (md) => {
+      md.use(timeline);
+    },
+  }, 
+
+  vite: {
+    plugins: [
+      AnnouncementPlugin({
+        title: '消息',
+        body: [
+          { type: 'text', content: '🎉如有问题请点击下方按钮 !' },
+          // {
+          //   type: 'image',
+          //   src: 'https://cdn.upyun.sugarat.top/mdImg/sugar/54eacf3e730af9c1e3542a4800a422ea',
+          //   style: 'display: inline-block;width:46%;padding-left:6px'
+          // }
+        ],
+        footer: [
+          {
+            type: 'button',
+            content: '在线联系',
+            link: 'https://i.csdn.net/#/msg/chat/m0_73756108'
+          }
+        ],
+      }),
+      vitepressProtectPlugin({
+        disableF12: false, // 禁用F12开发者模式
+        disableCopy: false, // 禁用文本复制
+        disableSelect: false, // 禁用文本选择
+      })
+
+    ]
   }
-})
+}
+
+const vitePressSidebarOptions = {
+  // VitePress Sidebar's options here...
+  documentRootPath: 'docs',
+  collapsed: false,
+  capitalizeFirst: true,
+  useTitleFromFrontmatter: true,
+  removePrefixAfterOrdering:true,
+  prefixSeparator:/\d+\./g
+};
+
+export default defineConfig(withSidebar(vitePressOptions, vitePressSidebarOptions));
