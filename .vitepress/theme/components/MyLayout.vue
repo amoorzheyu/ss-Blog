@@ -5,6 +5,8 @@ import { useData } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
 import { nextTick, provide } from 'vue'
 
+import { useSlots } from 'vue';
+
 const { isDark } = useData()
 
 const enableTransitions = () =>
@@ -43,7 +45,12 @@ provide('toggle-appearance', async ({ clientX: x, clientY: y }: MouseEvent) => {
 
 <template>
   <DefaultTheme.Layout>
-    <!-- 这里可以插入其他插槽组件 -->
+    <template #nav-bar-content-after>
+      <slot name="nav-bar-content-after"></slot>
+    </template>
+    <template #nav-screen-content-after>
+      <slot name="nav-screen-content-after"></slot>
+    </template>
   </DefaultTheme.Layout>
 </template>
 
